@@ -1,0 +1,31 @@
+##server:
+##  port: 8899
+#spring:
+#  profiles:
+#    active: dev
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/jk?serverTimezone=GMT%2B8
+#    username: root
+#    password: 110636
+#    driver-class-name: com.mysql.jdbc.Driver
+#    type: com.alibaba.druid.pool.DruidDataSource
+#  jackson:
+#    default-property-inclusion: non_null
+#mybatis-plus:
+#  type-aliases-package: com.yang.jk.mapper
+#  global-config:
+#    db-config:
+#      id-type: auto
+#  configuration:
+#    map-underscore-to-camel-case: true
+#logging:
+#  level:
+#    com.yang.jk.mapper: debug
+#jk:
+#  cfg:
+#    cross-origins:
+#      - http://localhost:63342/
+#    allowed-methods:
+#      - GET
+#      - POST
+#

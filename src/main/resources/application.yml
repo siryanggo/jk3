@@ -1,0 +1,64 @@
+server:
+  port: 8891
+spring:
+#  resources:
+#    static-locations:
+#      - classpath: /static/
+#      - file: ///${jk.upload.basic-path}
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+      enabled: true
+  # redis配置
+  redis:
+    host: 47.106.67.30
+    port: 6379
+    password: mamahahayang
+    database: 0
+    timeout: 10000ms
+    lettuce:
+      pool:
+        max-active: 1024
+        max-wait: 10000ms
+        max-idle: 20
+        min-idle: 5
+#  profiles:
+#    active: dev
+  datasource:
+    url: jdbc:mysql://47.106.67.30:3306/jk?serverTimezone=GMT%2B8
+    username: root
+    password: 18774954780jkl
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  jackson:
+    default-property-inclusion: non_null
+mybatis-plus:
+  type-aliases-package: com.yang.jk.mapper
+  global-config:
+    db-config:
+      id-type: auto
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    com.yang.jk.mapper: debug
+
+jk:
+  upload:
+    basic-path: /ASM/code/jk/
+    upload-path: upload/
+    img-path: img/
+    video-path: video/
+
+#jk:
+#  cfg:
+#    cross-origins:
+#      - http://localhost:63342/
+#    allowed-methods:
+#      - GET
+#      - POST
+#springfox:
+#  documentation:
+#    swagger-ui:
+#      base-url: index.html
